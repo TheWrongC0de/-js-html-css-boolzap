@@ -28,6 +28,7 @@ img{
 
 .row .col-lg-8 {
   display: flex;
+  margin-top: 5px;
 }
 .row .col-lg-4 {
   display: flex;
