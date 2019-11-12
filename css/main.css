@@ -7,6 +7,7 @@
 
 
 
+
 img{
   width: 50px;
   height: 50px;
@@ -78,9 +79,10 @@ img{
 .chat .col-4 .col-3 p{
 
 }
-.chat .col-1{
+.chat .col-12{
   background-color: rgba(0,0,0,.2);
   display: flex;
+  flex-direction: column;
 
 }
 
@@ -96,4 +98,27 @@ img{
 .chat .row .col-8{
   display: flex;
   flex-direction: column;
+}
+.chat .flex-column .col-11{
+  background-image: url("../img/sfondochat.png");
+  width: 850px;
+  overflow-y: scroll;
+}
+
+.chat .flex-column .col-1{
+  display: flex;
+
+
+}
+.chat .flex-column .col-1 i{
+  margin-top: 40px;
+}
+
+.chat .flex-column .col-1 .row .col-12{
+  background-color: white;
+  width: 745px;
+  border-radius: 50px;
+}
+.chat .flex-column .col-1 .row .col-12 p{
+  margin-top: 20px;
 }
