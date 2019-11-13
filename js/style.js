@@ -16,31 +16,19 @@ quindi approccio: tengo il mio codice il più pulito possibile e parto dalla que
 l’ex prenderà come detto vari giorni quindi abbiamo il tempo poi pian piano, di andare ad affinare la dove, per questioni di tempo abbiam dovuto tralasciare i dettagli;
 come detto: Prima di iniziare, come Milestone#0, la questione è leggere per bene le specifiche e fare tutte domande del caso, per non fare lavoro inutile.
 Buon coding, e ci si vede domattina per fare un pò di codereview sul milestone#1. */
+$( document ).ready(function() {
 
-$(document).ready(function () {
+  $(".new-message.input").click(function(){
 
-//cliccando l'emote invio il messaggio
-   $(".fa-smile").click(send)
+    var messaggio = $(".messaggio").val();
 
+  })
+  var elementmgs = $(".template .messaggio").clone();
 
+  console.log(elementmgs);
 
+  var elementmgstxt = elementmgs.text(messaggio);
 
-//Funzione esterna per invio dei messaggi
-function send(){
-   //input utente
-   var messaggio = $(".msg").val();
+  $(".container").append(elementmgs);
 
-   var elementmsg = $("#template .msgsent").clone();
-
-   console.log(elementmsg);
-
-   elementmsg.find(".testo").text(messaggio);
-
-
-
-  //il messaggio si resetta ad ogni invio;
-      $(".msg").val("");
-   }
-
-}
 });

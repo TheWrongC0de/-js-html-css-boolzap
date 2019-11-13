@@ -1,141 +1,197 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Boolzap</title>
-  </head>
-   <body>
-     <div class="container-fluid">
-      <div class="row">
-        <div class="col-4">
-          <div class="col-7">
-            <img src="img/ezreal.png" alt="">
-          </div>
-          <div class="col-5">
-           <i class="far fa-circle"></i>
-           <i class="fas fa-comment-dots"></i>
-           <i class="fas fa-ellipsis-v"></i>
-          </div>
-        </div>
-        <div class="col-8">
-          <div class="col-8">
-           <img src="img/rengar.png" alt="">
-           <h6>Rengar</h6>
-           <p>Ultimo accesso oggi alle 12:44</p>
-          </div>
-          <div class="col-4">
-           <i class="fas fa-search"></i>
-           <i class="fas fa-paperclip"></i>
-          <i class="fas fa-ellipsis-v"></i>
-          </div>
-        </div>
-      </div>
-      <div class="chat">
-        <div class="row">
-          <div class="col-4">
-            <div class="row flex-column">
-              <div class="col-12">
-                <i class="fas fa-bell-slash"></i>
-                <p>Ricevi notifiche dei nuovi messaggi</p>
-                <span>Attiva notifiche desktop</span>
-              </div>
-              <div class="col-12">
-                <div class="col-12">
-                  <i class="fas fa-search"></i>
-                  <p>cerca o inizia una nuova chat</p>
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="col-12">
-                  <img src="img/rengar.png" alt="">
-                  <h6>Rengar</h6>
-                  <p>ok</p>
-                  <p>12:56</p>
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="col-12">
-                  <img src="img/rengar.png" alt="">
-                  <h6>Rengar</h6>
-                  <p>non poteva essere altrimenti</p>
-                  <p>12:56</p>
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="col-12">
-                  <img src="img/rengar.png" alt="">
-                  <h6>Rengar</h6>
-                  <p>non poteva essere altrimenti</p>
-                  <p>12:56</p>
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="col-12">
-                  <img src="img/rengar.png" alt="">
-                  <h6>Rengar</h6>
-                  <p>ok</p>
-                  <p>12:56</p>
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="col-12">
-                  <img src="img/rengar.png" alt="">
-                  <h6>Rengar</h6>
-                  <p>ok</p>
-                  <p>12:56</p>
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="col-12">
-                  <img src="img/rengar.png" alt="">
-                  <h6>Rengar</h6>
-                  <p>non poteva essere altrimenti</p>
-                  <p>12:56</p>
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="col-12">
-                  <img src="img/rengar.png" alt="">
-                  <h6>Rengar</h6>
-                  <p>ok</p>
-                  <p>12:56</p>
-                </div>
-              </div>
-            </div>
-          </div>
-            <div class="row flex-column">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+		<link rel="stylesheet" href="css/main.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="left">
+				<div class="header-left">
+					<div class="header-left-logo">
+						<img src="img/ekko.png" alt="">
+					</div>
+					<div class="header-left-icons">
+						<i class="fas fa-circle-notch"></i>
+						<i class="fas fa-comment-alt"></i>
+						<i class="fas fa-ellipsis-v"></i>
+					</div>
+				</div>
+				<div class="left-disclaimer">
+					<div class="left-disclaimer-logo">
+						<i class="fa fa-bell-slash" aria-hidden="true"></i>
+					</div>
+					<div class="left-disclaimer-text">
+						<h3>Ricevi notifiche di nuovi messaggi</h3>
+						<a href="#">Attiva notifiche desktop</a>
+					</div>
+				</div>
+				<div class="left-searchbar">
+					<label class="search-label" for="search">
+						<i class="fa fa-search" aria-hidden="true"></i>
+					</label>
+					<input id="contacts-filter" class="left-searchbar-input" placeholder="Cerca o inizia una nuova chat" name="search">
+				</div>
+				<div class="contacts">
+					<div class="contact active" data-conversazione="0">
+						<div class="contact-logo">
+							<img src="img/ezreal.png" alt="">
+						</div>
+						<div class="contact-info">
+							<h3>
+								<span class="contact-name">Ezreal</span>
+								<span class="time f-right">17.53</span>
+							</h3>
+							<small>Learn to play noob</small>
+						</div>
+					</div>
+					<div class="contact" data-conversazione="1">
+						<div class="contact-logo">
+							<img src="img/rengar.png" alt="">
+						</div>
+						<div class="contact-info">
+							<h3>
+								<span class="contact-name">Rengar</span>
+								<span class="time f-right">17.53</span>
+							</h3>
+							<small>Surr 15 pls </small>
+						</div>
+					</div>
+					<div class="contact" data-conversazione="2">
+						<div class="contact-logo">
+							<img src="img/poppy.png" alt="">
+						</div>
+						<div class="contact-info">
+							<h3>
+								<span class="contact-name">Poppy</span>
+								<span class="time f-right">17.53</span>
+							</h3>
+							<small>Fucking Retard team</small>
+						</div>
+					</div>
+					<div class="contact" data-conversazione="3">
+						<div class="contact-logo">
+							<img src="img/lux.png" alt="">
+						</div>
+						<div class="contact-info">
+							<h3>
+								<span class="contact-name">Lux</span>
+								<span class="time f-right">17.53</span>
+							</h3>
+							<small>GLHF</small>
+						</div>
+					</div>
+					<div class="contact" data-conversazione="4">
+						<div class="contact-logo">
+							<img src="img/garen.png" alt="">
+						</div>
+						<div class="contact-info">
+							<h3>
+								<span class="contact-name">Garen</span>
+								<span class="time f-right">17.53</span>
+							</h3>
+							<small>Surrender Pls</small>
+						</div>
+					</div>
+					<div class="contact" data-conversazione="5">
+						<div class="contact-logo">
+							<img src="img/sylas.png" alt="">
+						</div>
+						<div class="contact-info">
+							<h3>
+								<span class="contact-name">Sylas</span>
+								<span class="time f-right">17.53</span>
+							</h3>
+							<small>Report you , fuck Int</small>
+						</div>
+					</div>
+					<div class="contact" data-conversazione="6">
+						<div class="contact-logo">
+							<img src="img/noct.png" alt="">
+						</div>
+						<div class="contact-info">
+							<h3>
+								<span class="contact-name">Nocturne</span>
+								<span class="time f-right">17.53</span>
+							</h3>
+							<small>GG Noob</small>
+						</div>
+					</div>
+					<div class="contact" data-conversazione="7">
+						<div class="contact-logo">
+							<img src="img/annie.png" alt="">
+						</div>
+						<div class="contact-info">
+							<h3>
+								<span class="contact-name">Annie</span>
+								<span class="time f-right">17:53</span>
+							</h3>
+							<small>GG RIOT</small>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="right">
+				<div class="header-right">
+					<div class="header-right-logo">
+						<img src="img/ezreal.png" alt="">
+						<h3><span id="header-right-contact-name">Ezreal</span> <br> <small class="time">Ultimo accesso oggi alle 15.40</small></h3>
+					</div>
+					<div class="header-right-icons">
+						<i class="fas fa-search"></i>
+						<i class="fas fa-paperclip"></i>
+						<i class="fas fa-ellipsis-v"></i>
+					</div>
+				</div>
+				<div class="right-messages-container" >
+					<!-- inseriamo a mano i vari pannelli per la versione base -->
+					<div class="right-messages active" data-conversazione="0">
+					</div>
+					<div class="right-messages" data-conversazione="1">
+					</div>
+					<div class="right-messages" data-conversazione="2">
+					</div>
+					<div class="right-messages" data-conversazione="3">
+					</div>
+					<div class="right-messages" data-conversazione="4">
+					</div>
+					<div class="right-messages" data-conversazione="5">
+					</div>
+					<div class="right-messages" data-conversazione="6">
+					</div>
+					<div class="right-messages" data-conversazione="7">
+					</div>
+				</div>
+				<div class="right-footer">
+					<div class="right-footer-icon f-left">
+						<i class="far fa-smile"></i>
+					</div>
+					<input class="new-message-inputs" placeholder="Scrivi un messaggio">
+					<div class="right-footer-icon f-right">
+						<i class="fa fa-microphone" aria-hidden="true"></i>
+					</div>
+				</div>
+			</div>
+		</div>
 
-                <div class="col-11">
-                </div>
-                <div class="col-1">
-                  <i class="far fa-smile"></i>
-                  <div class="row invio">
-                    <div class="col-12">
-                      <input type="text" class="msg" placeholder="Scrivi un messaggio">
-                    </div>
 
-                  </div>
-                </div>
+		<!-- Utilizziamo i template da clonare con js -->
+		<div class="template">
+			<div class="message">
+				<span class="message-text">Inserisci il messaggio con js</span>
+				<i class="fa fa-chevron-down f-right message-options"></i>
+				<span class="message-time">17:31</span>
+				<div class="message-options-panel">
+					<div class="message-info">Info messaggio</div>
+					<div class="message-destroy">Cancella messaggio</div>
+				</div>
+			</div>
+		</div>
 
-
-
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <!-- parte template-->
-   <div id="template">
-      <div class='msgsent'>
-         <p class="testo"></p>
-      </div>
-   </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  </body>
+		<script src="js/style.js"></script>
+	</body>
 </html>
