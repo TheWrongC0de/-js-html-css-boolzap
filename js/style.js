@@ -20,15 +20,59 @@ $( document ).ready(function() {
 
   $(".new-message.input").click(function(){
 
-    var messaggio = $(".messaggio").val();
+    var messaggio = $(".message-text").val();
 
   })
-  var elementmgs = $(".template .messaggio").clone();
+  //Clono div che sta in id template
+  var elementmsg = $(".template .message").clone();
 
-  console.log(elementmgs);
+  console.log(elementmsg);
 
-  var elementmgstxt = elementmgs.text(messaggio);
+  //formatto il messaggio aggiungendo la classe "send";
 
-  $(".container").append(elementmgs);
+  elementmsg.addClass("send")
 
+  //aggiungo il testo al messaggio
+
+  var elementmsgtxt = elementmsg.text(messaggio);
+
+  //uso append per mettere copia del testo valorizzato
+  $(".container").append(elementmsg);
+
+  //ripuliamo la riga per scrivere
+
+  $(".message-text").val("");
+
+  //Risposta Auto del pc
+
+  var elementmsg = $(".template .message").clone();
+
+  //timeout alla funzione di 1sec per risposta pc
+
+  setTimeout(function (){
+    //aggiungo la classe ricevuto per la formattazione del msg
+    elementmsg.addClass("received");
+    //modifico testo
+    elementmsg.find(".msg").text("GG");
+    //valoriziamo il messaggio
+    $(".container").append(elementmsg);
+  }, 1000);
+
+  $(".searchbar-input").keyup(function(event){
+    //creo una var per caso insensitive
+    var ricercaNome = $(this).val().tolowerCase();
+
+    // each per ciclare e trovare
+    $(".contact").each(function(){
+      //var per il nome da cercare
+
+      var nomeDaCercare = $(this).find(".contact-name span:first-child").text().tolowerCase();
+
+      //se lo trova lo mostra se non lo trova non lo mostra
+      if (nomeDaCercare.includes(ricercaNome)){
+        $(this).show();
+      } else {
+        $(this).hide();
+      }
+    });
 });
